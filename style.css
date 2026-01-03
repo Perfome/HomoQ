@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at center, #120812 0%, #040205 75%);
+  overflow: hidden;
+  height: 100vh;
+  font-family: "Georgia", serif;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.text {
+  position: absolute;
+  bottom: 8%;
+  width: 100%;
+  text-align: center;
+  color: #f5eaf2;
+  opacity: 0;
+  animation: textFade 4s ease forwards;
+  animation-delay: 5.5s;
+  text-shadow:
+    0 0 10px rgba(255,120,200,0.25),
+    0 0 30px rgba(255,120,200,0.15);
+}
+
+.text p {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+@keyframes textFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
